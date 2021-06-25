@@ -40,9 +40,16 @@ mutation {
 
 ```graphql
 {
-  getUser(id: "d3b00dfc-9b45-4fc6-b7b4-7d6c550512e4") {
+  getUser(id: "e3d985b6-b870-4f4b-be89-bb290ecb880d") {
     name,
-    email
+    email,
+    trainings {
+      id,
+      exercises{
+        id,
+        name
+      }
+    }
   }
 }
 ```
@@ -78,3 +85,9 @@ mutation {
   }
 }
 ```
+
+# TO DO
+
+* create new fields in the users table, such as height, weight, current fat and muscle index
+
+* create mutations to delete and change users and trainings
